@@ -1,0 +1,16 @@
+<h1>APPLYTE Administrator</h1>
+<p class="table"><strong>Total emails enrolled:</strong> <%= @admins.count %></p>
+<span><%= link_to "sign_out", destroy_user_session_path, :method=>:delete, :class=>"btn btn-primary" %>
+<table class="table">
+  <tr>
+    <th>Email</th>
+    <th>Create time</th>
+  </tr>
+  <% @admins.each do |admin| %>
+  <tr>
+    <td><%= admin.email %></td>
+    <td><%= admin.created_at.in_time_zone("Taipei") %></td>
+  </tr>
+  <% end %>
+</table>
+
