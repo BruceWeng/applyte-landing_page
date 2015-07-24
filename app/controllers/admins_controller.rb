@@ -33,8 +33,7 @@ class AdminsController < ApplicationController
 private
 
   def check_email
-byebug
-    admin_email_list = ['bruce@gmail.com']
+    admin_email_list = ['applyte@gmail.com']
     result = false
     if current_user && admin_email_list.include?(current_user.email)
       result = true
