@@ -33,7 +33,7 @@ class AdminsController < ApplicationController
 private
 
   def check_email
-    admin_email_list = ['applyte@gmail.com']
+    admin_email_list = ['bruce@applyte.io']
     result = false
     if current_user && admin_email_list.include?(current_user.email)
       result = true
